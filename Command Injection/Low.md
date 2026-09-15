@@ -5,7 +5,11 @@
 - 模块：Command Injection（命令注入）
 - 安全等级：Low
 - 漏洞原理：后端直接将用户输入拼接进系统命令，没有任何过滤，可通过`; | &`等命令分隔符拼接多条系统命令。
-
+- 
+## Payload（Windows）
+127.0.0.1 | whoami
+127.0.0.1 & dir
+  
 ## 源码分析
 ```php
 <?php
@@ -27,6 +31,4 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
     echo "<pre>{$cmd}</pre>";
 }
 ?>
-##Payload（Windows）
-127.0.0.1 | whoami
-127.0.0.1 & dir
+
